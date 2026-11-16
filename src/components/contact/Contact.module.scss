@@ -1,0 +1,281 @@
+
+@use '../../styles/abstracts/variables' as *;
+
+
+// =============================
+// MAIN BLOCK
+// =============================
+
+.contactBlock {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.contactTitle {
+    text-align: center;
+    font-family: $font-primary;
+    font-size: clamp(24px, 4vw, #{$font-size-xxxl});
+    font-weight: 200;
+}
+
+
+// =============================
+// CONTACT INFORMATION
+// =============================
+
+.contactInfo {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+    gap: 30px;
+
+    width: 100%;
+    max-width: 850px;
+    margin: 45px auto 0;
+}
+
+.contactColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    min-width: 0;
+    padding-left: 15px;
+    border-left: 3px solid $primary-color;
+
+    &:nth-child(2) {
+        border-color: #00b8d9;
+    }
+
+    &:nth-child(3) {
+        border-color: #00d66b;
+    }
+
+    a {
+        color: $ligth-text-color;
+        font-family: $font-secondary;
+        font-size: $font-size-md;
+        text-decoration: none;
+
+        overflow-wrap: anywhere;
+
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+
+// =============================
+// DESCRIPTION
+// =============================
+
+.contactDescription {
+    max-width: 850px;
+    margin: 45px auto 0;
+
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+    color: $ligth-text-color;
+}
+
+
+// =============================
+// CONTACT FORM
+// =============================
+
+.contactForm {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.formFields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.formLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+
+    span {
+        font-family: $font-secondary;
+        font-size: $font-size-sm;
+        color: $ligth-text-color;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        border: none;
+        outline: none;
+        border-radius: $secondary-border-radius;
+        background-color: $dark-slot-color;
+        color: $ligth-text-color;
+
+        padding: 12px 15px;
+        font-family: $font-secondary;
+        font-size: $font-size-sm;
+
+        transition: box-shadow 0.3s ease;
+
+        &::placeholder {
+            color: #888;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px $primary-color;
+        }
+    }
+
+    input {
+        height: 45px;
+    }
+}
+
+.formMessage {
+    textarea {
+        flex: 1;
+        min-height: 150px;
+        resize: vertical;
+    }
+}
+
+
+// =============================
+// SEND BUTTON
+// =============================
+
+.formButton {
+    width: 140px;
+    height: 40px;
+
+    border: none;
+    border-radius: $secondary-border-radius;
+    background-color: $primary-color;
+    color: $ligth-text-color;
+
+    font-family: $font-secondary;
+    font-size: $font-size-md;
+    cursor: pointer;
+
+    transition: $transition;
+
+    &:hover {
+        background-color: #e0343b;
+        transform: translateY(-2px);
+    }
+}
+
+
+// =============================
+// TABLET
+// =============================
+
+@media (max-width: 1024px) {
+
+    .contactBlock {
+        margin-top: 80px;
+    }
+
+    .contactInfo {
+        gap: 20px;
+    }
+
+    .contactColumn {
+        padding-left: 12px;
+
+        a {
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+
+// =============================
+// SMALL TABLET
+// =============================
+
+@media (max-width: 768px) {
+
+    .contactBlock {
+        margin-top: 60px;
+    }
+
+    .contactInfo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .contactColumn:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .contactDescription {
+        margin-top: 30px;
+    }
+}
+
+
+// =============================
+// MOBILE
+// =============================
+
+@media (max-width: 480px) {
+
+    .contactBlock {
+        margin-top: 50px;
+    }
+
+    .contactInfo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contactColumn {
+        min-height: 60px;
+    }
+
+    .contactDescription {
+        margin-top: 25px;
+    }
+
+    .formFields {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .formMessage textarea {
+        min-height: 180px;
+    }
+
+    .formButton {
+        width: 100%;
+        height: 45px;
+    }
+}

@@ -1,0 +1,237 @@
+
+@use '../../styles/abstracts/variables' as *;
+
+
+// =============================
+// MAIN BLOCK
+// =============================
+
+.projectsBlock {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.projectsTitle {
+    text-align: center;
+    font-family: $font-primary;
+    font-size: clamp(24px, 4vw, #{$font-size-xxxl});
+    font-weight: 200;
+}
+
+.projectsDesc {
+    margin-top: 10px;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: $font-size-md;
+    line-height: 1.5;
+}
+
+
+// =============================
+// PROJECTS FLEXBOX
+// =============================
+
+.projectsItemsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+
+// =============================
+// PROJECT CARD
+// =============================
+
+.block {
+    flex: 0 0 calc((100% - 80px) / 5);
+    min-width: 0;
+
+    aspect-ratio: 1 / 1;
+    position: relative;
+    isolation: isolate;
+
+    margin-top: 80px;
+    border-radius: $primary-border-radius;
+
+    background-color: transparent;
+    text-decoration: none;
+    color: $ligth-text-color;
+
+    img {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: inherit;
+        display: block;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover > .blockBehind,
+    &:focus-visible > .blockBehind {
+        transform: translateY(-80px);
+    }
+}
+
+
+// =============================
+// BACKSIDE
+// =============================
+
+.blockBehind {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border-radius: $primary-border-radius;
+    background-color: $dark-slot-color;
+
+    transition: $transition;
+}
+
+
+// =============================
+// CARD TEXT
+// =============================
+
+.blockTextBehind,
+.blockLinkBehind {
+    font-family: $font-secondary;
+    font-size: $font-size-md;
+    font-weight: $font-regular;
+
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.blockLinkBehind {
+    margin-top: 8px;
+    font-weight: $font-light;
+    font-size: $font-size-sm;
+    color: rgb(189, 189, 189);
+}
+
+
+// =============================
+// TABLET
+// =============================
+
+@media (max-width: 1024px) {
+
+    .projectsBlock {
+        margin-top: 80px;
+    }
+
+    .projectsItemsBlock {
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .block {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+}
+
+
+// =============================
+// SMALL TABLET
+// =============================
+
+@media (max-width: 768px) {
+
+    .projectsBlock {
+        margin-top: 60px;
+    }
+
+    .projectsDesc {
+        font-size: $font-size-sm;
+    }
+
+    .projectsItemsBlock {
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .block {
+        flex: 0 0 calc((100% - 15px) / 2);
+    }
+}
+
+
+// =============================
+// MOBILE
+// =============================
+
+@media (max-width: 480px) {
+
+    .projectsBlock {
+        margin-top: 50px;
+    }
+
+    .block {
+        border-radius: $secondary-border-radius;
+    }
+
+    .blockBehind {
+        border-radius: inherit;
+    }
+
+    .blockTextBehind {
+        font-size: $font-size-sm;
+    }
+
+    .blockLinkBehind {
+        font-size: 12px;
+    }
+}
+
+
+// =============================
+// TOUCH DEVICES
+// =============================
+
+@media (hover: none) {
+
+    .block {
+        aspect-ratio: auto;
+        margin-top: 0;
+
+        background-color: $dark-slot-color;
+
+        img {
+            aspect-ratio: 1 / 1;
+            height: auto;
+        }
+
+        &:hover > .blockBehind,
+        &:focus-visible > .blockBehind {
+            transform: none;
+        }
+    }
+
+    .blockBehind {
+        position: static;
+        height: auto;
+        min-height: 70px;
+        transform: none;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,196 @@
+
+@use '../../styles/abstracts/variables' as *;
+
+
+// ============================
+// HEADER
+// ============================
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(15px);
+}
+
+
+// ============================
+// DESKTOP MENU
+// ============================
+
+.desktopMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.headerBtn {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+
+    font-family: $font-secondary;
+    color: $ligth-text-color;
+
+    cursor: pointer;
+    transition: $transition;
+
+    padding: 5px 10px;
+
+    &:hover {
+        border-bottom-color: $primary-color;
+    }
+}
+
+.headerBtnActive {
+    background-color: $primary-color;
+    border-radius: $secondary-border-radius;
+}
+
+
+// ============================
+// MOBILE MENU
+// ============================
+
+.mobileMenu {
+    display: none;
+    position: relative;
+}
+
+.mobileMenuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 8px 15px;
+
+    border: none;
+    border-radius: $secondary-border-radius;
+    background-color: $dark-slot-color;
+
+    color: $ligth-text-color;
+    font-family: $font-secondary;
+    font-size: $font-size-lg;
+
+    cursor: pointer;
+}
+
+
+// ============================
+// ARROW
+// ============================
+
+.arrow {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.arrowActive {
+    transform: rotate(180deg);
+}
+
+
+// ============================
+// DROPDOWN
+// ============================
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    min-width: 180px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: $dark-slot-color;
+    border-radius: $secondary-border-radius;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+}
+
+.dropdownActive {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdownBtn {
+    width: 100%;
+    padding: 10px 15px;
+
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+    border-radius: $secondary-border-radius;
+
+    color: $ligth-text-color;
+    font-family: $font-secondary;
+    font-size: $font-size-md;
+
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.dropdownBtnActive {
+    background-color: $primary-color;
+}
+
+
+// ============================
+// RESPONSIVE
+// ============================
+
+@media (max-width: 768px) {
+
+    .header {
+        justify-content: flex-start;
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dropdown,
+    .arrow {
+        transition: none;
+    }
+}

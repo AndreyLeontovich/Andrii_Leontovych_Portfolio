@@ -1,0 +1,331 @@
+
+@use '../../styles/abstracts/variables' as *;
+
+
+// =============================
+// MAIN BLOCK
+// =============================
+
+.techSkillsBlock {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.techSkillsTitle {
+    text-align: center;
+    font-family: $font-primary;
+    font-size: clamp(24px, 4vw, #{$font-size-xxxl});
+    font-weight: 200;
+}
+
+
+// =============================
+// LOGOS LINE
+// =============================
+
+.techSkillsLine {
+    position: relative;
+    isolation: isolate;
+    min-height: 80px;
+
+    .backLine {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        height: 100%;
+        width: 100vw;
+
+        background-color: $dark-slot-color;
+    }
+}
+
+.techSkillsLineLogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: clamp(25px, 4.5vw, 50px);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+
+// =============================
+// SKILLS GRID
+// =============================
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    grid-template-areas:
+        "languages frameworks library tools"
+        "frontend stateManagement library other";
+
+    column-gap: 30px;
+    row-gap: 40px;
+
+    align-items: start;
+    margin-top: 30px;
+}
+
+
+// =============================
+// GRID AREAS + COLORS
+// =============================
+
+.languages {
+    grid-area: languages;
+    --dot-color: #ff6b35;
+}
+
+.frameworks {
+    grid-area: frameworks;
+    --dot-color: #00b86b;
+}
+
+.library {
+    grid-area: library;
+    --dot-color: #f3ff0f;
+}
+
+.tools {
+    grid-area: tools;
+    --dot-color: #b829c9;
+}
+
+.frontend {
+    grid-area: frontend;
+    --dot-color: #ef4444;
+}
+
+.stateManagement {
+    grid-area: stateManagement;
+    --dot-color: #ff1677;
+}
+
+.other {
+    grid-area: other;
+    --dot-color: #00b8d9;
+}
+
+
+// =============================
+// CATEGORY
+// =============================
+
+.skillCategory {
+    min-width: 0;
+}
+
+.categoryTitle {
+    font-family: $font-secondary;
+    font-size: clamp(14px, 1.8vw, 20px);
+    font-weight: 400;
+    color: $ligth-text-color;
+
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+
+// =============================
+// SKILLS LIST
+// =============================
+
+.skillsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        position: relative;
+        padding-left: 15px;
+
+        font-family: $font-secondary;
+        font-size: 14px;
+        line-height: 1.6;
+        color: $ligth-text-color;
+
+        overflow-wrap: break-word;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.8em;
+            transform: translateY(-50%);
+
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+
+            background-color: var(--dot-color);
+        }
+    }
+}
+
+
+// =============================
+// TABLET
+// =============================
+
+@media (max-width: 1024px) {
+
+    .techSkillsBlock {
+        margin-top: 80px;
+    }
+
+    .techSkillsLineLogos {
+        gap: 15px;
+    }
+
+    .skillsGrid {
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    .skillsList {
+        li {
+            font-size: 13px;
+        }
+    }
+}
+
+
+// =============================
+// SMALL TABLET
+// =============================
+
+@media (max-width: 768px) {
+
+    .techSkillsBlock {
+        margin-top: 60px;
+    }
+
+    .techSkillsLineLogos {
+        gap: 10px;
+    }
+
+    .skillsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "languages frameworks"
+            "frontend stateManagement"
+            "library tools"
+            "library other";
+
+        column-gap: 25px;
+        row-gap: 30px;
+    }
+
+    .categoryTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .skillsList {
+        li {
+            font-size: 14px;
+        }
+    }
+}
+
+
+// =============================
+// MOBILE
+// =============================
+
+@media (max-width: 480px) {
+
+    .techSkillsBlock {
+        margin-top: 50px;
+    }
+
+    .techSkillsLine {
+        min-height: 60px;
+    }
+
+    .techSkillsLineLogos {
+        min-height: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .skillsGrid {
+        column-gap: 15px;
+        row-gap: 25px;
+        margin-top: 25px;
+    }
+
+    .categoryTitle {
+        font-size: 14px;
+    }
+
+    .skillsList {
+        li {
+            font-size: 12px;
+            padding-left: 12px;
+
+            &::before {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+}
+
+
+// =============================
+// SMALL MOBILE
+// =============================
+
+@media (max-width: 360px) {
+
+    .skillsGrid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "languages"
+            "frontend"
+            "frameworks"
+            "stateManagement"
+            "library"
+            "tools"
+            "other";
+    }
+
+    .categoryTitle {
+        font-size: 16px;
+    }
+
+    .skillsList {
+        li {
+            font-size: 14px;
+        }
+    }
+}

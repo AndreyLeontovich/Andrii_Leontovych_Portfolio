@@ -1,0 +1,155 @@
+
+@use '../../styles/abstracts/variables' as *;
+
+
+// MAIN CONTAINER
+
+.container {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    width: 100%;
+}
+
+
+// SECOND CONTAINER
+
+.secContainer {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .lineBlock {
+        border-top-left-radius: $secondary-border-radius;
+        border-bottom-left-radius: $secondary-border-radius;
+        opacity: 0;
+    }
+
+    .lineBlockTwo {
+        border-top-right-radius: $secondary-border-radius;
+        border-bottom-right-radius: $secondary-border-radius;
+        opacity: 0;
+    }
+}
+
+
+// TYPOGRAPHY
+
+.portfolioName {
+    font-family: $font-primary;
+    font-weight: $font-light;
+    font-size: clamp(32px, 5.5vw, 80px);
+    line-height: 1.15;
+
+    span {
+        color: $primary-color;
+    }
+}
+
+.titleSkills {
+    font-family: $font-secondary;
+    font-size: clamp(10px, 1.5vw, 20px);
+    white-space: nowrap;
+}
+
+
+// DECORATIVE ELEMENTS
+
+.lineBlock {
+    flex: 1;
+    height: 60px;
+    min-width: 50px;
+    max-width: 150px;
+
+    background-color: $dark-slot-color;
+
+    border-top-right-radius: $secondary-border-radius;
+    border-bottom-right-radius: $secondary-border-radius;
+}
+
+.lineBlockTwo {
+    flex: 1;
+    min-width: 50px;
+    height: 60px;
+
+    background-color: $dark-slot-color;
+
+    border-top-left-radius: $secondary-border-radius;
+    border-bottom-left-radius: $secondary-border-radius;
+}
+
+
+// TABLET
+
+@media (max-width: 1024px) {
+
+    .container {
+        gap: 3%;
+    }
+
+    .secContainer {
+        gap: 5%;
+    }
+
+    .lineBlock,
+    .lineBlockTwo {
+        height: 40px;
+        min-width: 20px;
+    }
+}
+
+
+// MOBILE
+
+@media (max-width: 768px) {
+
+    .container {
+        box-sizing: border-box;
+        padding: 20px 20px 5px;
+        justify-content: flex-end;
+    }
+
+    .portfolioName {
+        font-size: clamp(28px, 8.5vw, 60px);
+        text-align: right;
+        line-height: 1.15;
+
+        span {
+            display: block;
+        }
+    }
+
+    .secContainer {
+        box-sizing: border-box;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 5px 20px 20px;
+    }
+
+    .lineBlock,
+    .lineBlockTwo {
+        display: none;
+    }
+
+    .titleSkills {
+        font-size: clamp(10px, 2.6vw, 16px);
+    }
+}
+
+
+// SMALL MOBILE
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px 15px 5px;
+    }
+
+    .secContainer {
+        padding: 5px 15px 20px;
+        gap: 10px;
+    }
+}

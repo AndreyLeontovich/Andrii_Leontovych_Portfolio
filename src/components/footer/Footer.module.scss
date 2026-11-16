@@ -1,0 +1,27 @@
+@use '../../styles/abstracts/variables' as *;
+
+.footerBlock{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    p{
+        text-align: center;
+        font-family: 'Montserrat';
+        font-size:$font-size-md;
+        font-weight: 200;
+        margin-top: 10px;
+        color: grey;
+    }
+}
+.footerLine{
+    width: 100%;
+    height: 1px;
+    background-color: $dark-slot-color;
+
+}
+
