@@ -33,6 +33,7 @@ export function TechSkills() {
         "Mapbox GL JS",
         "Swiper",
         "Socket.IO Client",
+        "..."
       ],
     },
     {

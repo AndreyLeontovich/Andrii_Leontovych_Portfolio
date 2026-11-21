@@ -1,0 +1,389 @@
+@use '../../../styles/abstracts/variables' as *;
+
+
+
+.project {
+  min-height: 100vh;
+  padding: 100px 20px;
+  // background: $dark-background-color;
+  color: $ligth-text-color;
+  font-family: $font-secondary;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.logoWrapper {
+  width: 140px;
+  height: 140px;
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $dark-slot-color;
+  border: 1px solid $primary-color;
+  border-radius: $primary-border-radius;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.6;
+  // overflow: hidden;
+}
+
+.projectLabel {
+  margin-bottom: 20px;
+  color: $primary-color;
+  font-size: $font-size-sm;
+  font-weight: $font-bold;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.2;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+.subtitle {
+  margin: 20px 0 0;
+  font-family: $font-primary;
+  font-size: $font-size-lg;
+  line-height: 1.5;
+}
+
+.description {
+  max-width: 720px;
+  margin-top: 25px;
+  font-size: $font-size-md;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+
+  span {
+    padding: 12px 20px;
+    background: $dark-slot-color;
+    border: 1px solid $primary-color;
+    border-radius: $primary-border-radius;
+    font-size: $font-size-sm;
+  }
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+.sectionNumber {
+  color: $primary-color;
+  font-size: $font-size-sm;
+  font-weight: $font-bold;
+  letter-spacing: 2px;
+}
+
+.sectionTitle {
+  margin: 15px 0 35px;
+  font-family: $font-primary;
+  font-size: $font-size-xxl;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+
+  p {
+    margin: 0;
+    font-size: $font-size-md;
+    line-height: 1.9;
+    opacity: 0.8;
+  }
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.featureCard {
+  min-height: 220px;
+  padding: 28px;
+  background: $dark-slot-color;
+  border: 1px solid transparent;
+  border-radius: $secondary-border-radius;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $primary-color;
+  }
+
+  h3 {
+    margin: 24px 0 12px;
+    font-family: $font-primary;
+    font-size: $font-size-md;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    line-height: 1.8;
+    opacity: 0.75;
+  }
+}
+
+.featureNumber {
+  color: $primary-color;
+  font-size: $font-size-lg;
+  font-weight: $font-bold;
+}
+
+.workflow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.workflowStep {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 20px;
+  text-align: center;
+  background: $dark-slot-color;
+  border-radius: $secondary-border-radius;
+
+  span {
+    color: $primary-color;
+    font-size: $font-size-lg;
+    font-weight: $font-bold;
+  }
+
+  h3 {
+    margin: 18px 0 10px;
+    font-family: $font-primary;
+    font-size: $font-size-md;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    opacity: 0.75;
+  }
+}
+
+.workflowArrow {
+  color: $primary-color;
+  font-size: $font-size-xl;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.techItem {
+  padding: 16px 24px;
+  background: $dark-slot-color;
+  border: 1px solid transparent;
+  border-radius: $secondary-border-radius;
+  font-size: $font-size-sm;
+  font-weight: $font-bold;
+  transition: $transition;
+
+  &:hover {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.outcome {
+  padding: 60px;
+  background: $dark-slot-color;
+  border-left: 4px solid $primary-color;
+  border-radius: $primary-border-radius;
+
+  h2 {
+    margin: 25px 0;
+    font-family: $font-primary;
+    font-size: $font-size-xxxl;
+    line-height: 1.3;
+  }
+
+  > p {
+    max-width: 800px;
+    font-size: $font-size-md;
+    line-height: 1.9;
+    opacity: 0.8;
+  }
+}
+
+.role {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid $dark-background-color;
+
+  span {
+    color: $primary-color;
+    font-size: $font-size-sm;
+    font-weight: $font-bold;
+  }
+
+  p {
+    margin: 15px 0 0;
+    font-size: $font-size-sm;
+    line-height: 1.8;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 992px) {
+  .project {
+    padding: 70px 20px;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section {
+    margin-bottom: 75px;
+  }
+
+  .sectionTitle {
+    font-size: $font-size-xl;
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    padding: 45px 15px;
+  }
+
+  .hero {
+    padding-bottom: 65px;
+  }
+
+  .logoWrapper {
+    width: 105px;
+    height: 105px;
+    padding: 15px;
+  }
+
+  .projectLabel {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .title {
+    font-size: $font-size-xxl;
+  }
+
+  .subtitle {
+    font-size: $font-size-md;
+  }
+
+  .description {
+    font-size: $font-size-sm;
+  }
+
+  .tags {
+    gap: 8px;
+
+    span {
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .sectionTitle {
+    font-size: $font-size-xl;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    p {
+      font-size: $font-size-sm;
+    }
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .featureCard {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .workflow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .workflowStep {
+    width: 100%;
+    flex: auto;
+  }
+
+  .workflowArrow {
+    transform: rotate(90deg);
+  }
+
+  .techGrid {
+    gap: 10px;
+  }
+
+  .techItem {
+    padding: 12px 15px;
+    font-size: $font-size-sm;
+  }
+
+  .outcome {
+    padding: 30px 20px;
+
+    h2 {
+      font-size: $font-size-xl;
+    }
+
+    > p {
+      font-size: $font-size-sm;
+    }
+  }
+}

@@ -84,22 +84,22 @@ export const Contact = () => {
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
             Facebook
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/rshnaps?hvrq=MmlrbmJkY3p4MGxp&utm_source=qr" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/andrey-leontovich-a4b7582ab/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>
 
         <div className={styles.contactColumn}>
-          <a href="https://telegram.org" target="_blank" rel="noreferrer">
+          <a href="https://t.me/andrey13576" target="_blank" rel="noreferrer">
             Telegram
           </a>
-          <a href="https://www.viber.com" target="_blank" rel="noreferrer">
+          <a href="https://viber.click/380997892504" target="_blank" rel="noreferrer">
             Viber
           </a>
-          <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/380997892504" target="_blank" rel="noreferrer">
             WhatsApp
           </a>
         </div>
