@@ -6,6 +6,7 @@ import rateLimit from "express-rate-limit";
 dotenv.config();
 
 const app = express();
+app.set("trust proxy", "loopback");
 
 const PORT = process.env.PORT || 5000;
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
@@ -107,5 +108,5 @@ ${message}
 });
 
 app.listen(PORT, "127.0.0.1", () => {
-    console.log(`Server running on http://127.0.0.1:${PORT}`);
+  console.log(`Server running on http://127.0.0.1:${PORT}`);
 });
