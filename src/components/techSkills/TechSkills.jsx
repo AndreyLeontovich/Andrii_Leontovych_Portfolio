@@ -86,15 +86,15 @@ export function TechSkills() {
       <div className={styles.techSkillsLine}>
         <div className={styles.techSkillsLineLogos}>
           
-          <div className={styles.logo}><img src="./../src/assets/logos/HTML.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/CSS.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/JavaScript-logo.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/5968381.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/vscode-dark.svg" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/react-1.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/figma.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/PS.png" alt="" /></div>
-          <div className={styles.logo}><img src="./../src/assets/logos/Illistrator.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/HTML.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/CSS.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/JavaScript-logo.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/5968381.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/vscode-dark.svg" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/react-1.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/figma.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/PS.png" alt="" /></div>
+          <div className={styles.logo}><img src="/assets/logos/Illistrator.png" alt="" /></div>
         </div>
 
         <div className={styles.backLine}></div>
