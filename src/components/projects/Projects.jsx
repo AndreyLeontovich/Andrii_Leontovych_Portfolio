@@ -6,32 +6,32 @@ export const projects = [
   {
     id: 1,
     title: "Mivello Bot",
-    image: "/assets/projectLogo/IMG_9595.JPG",
+    image: "/projectLogo/IMG_9595.JPG",
     link: "/mivello",
   },
   {
     id: 2,
     title: "TodoList — Firebase",
-    image: "/assets/projectLogo/TodoList_Liquid_Glass.jpg",
+    image: "/projectLogo/TodoList_Liquid_Glass.jpg",
     link: "/todoList",
     external: false,
   },
   {
     id: 3,
     title: "NEONIX",
-    image: "/assets/images/5p.jpg",
+    image: "/images/5p.jpg",
     link: "https://example.com/project-3",
   },
   {
     id: 4,
     title: "Possession",
-    image: "/assets/images/2p.jpg",
+    image: "/images/2p.jpg",
     link: "https://example.com/project-4",
   },
   {
     id: 5,
     title: "Dashboard",
-    image: "/assets/images/1p.jpg",
+    image: "/images/1p.jpg",
     link: "https://example.com/project-5",
   },
 ];
@@ -71,7 +71,7 @@ export const Projects = () => {
           );
         })}
         {/* <a href="https://www.wikipedia.org" className={styles.block}>
-                <img src="/assets/images/1p.jpg" alt="" />
+                <img src="/images/1p.jpg" alt="" />
                 <div className={styles.blockBehind}>
                     <h3 className={styles.blockTextBehind}>Sale moto<br/>Frontend side</h3>
                     <h4 className={styles.blockLinkBehind}>Open for view</h4>
