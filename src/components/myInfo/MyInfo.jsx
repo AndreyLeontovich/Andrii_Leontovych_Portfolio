@@ -6,7 +6,7 @@ export function MyInfo() {
     <>
       <div className={styles.myInfoBlock}>
         <div className={styles.myInfoImg}>
-          <img src="/images/my_photo.PNG" alt="" />
+          <img src="/images/my_photo.png" alt="" />
         </div>
 
         <div className={styles.myInfoDesc}>
