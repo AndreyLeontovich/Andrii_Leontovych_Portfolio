@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./MivelloProject.module.scss";
 
-import logo from "../../../assets/projectLogo/IMG_9595.JPG";
+
 
 const features = [
   {
@@ -73,7 +73,7 @@ export const MivelloProject = () => {
         <header className={styles.hero}>
           <div className={styles.logoWrapper}>
             <img
-              src={logo}
+              src="/projectLogo/IMG_9595.JPG"
               alt="Mivello Boutique logo"
               className={styles.logo}
             />

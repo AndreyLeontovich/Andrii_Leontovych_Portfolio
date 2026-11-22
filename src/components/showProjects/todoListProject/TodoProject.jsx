@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./TodoProject.module.scss";
 
-import logo from "../../../assets/projectLogo/TodoList_Liquid_Glass.jpg";
+
 
 const features = [
   {
@@ -61,7 +61,7 @@ export const TodoProject = () => {
         <header className={styles.hero}>
           <div className={styles.logoWrapper}>
             <img
-              src={logo}
+              src="/projectLogo/TodoList_Liquid_Glass.jpg"
               alt="TodoList project logo"
               className={styles.logo}
             />
